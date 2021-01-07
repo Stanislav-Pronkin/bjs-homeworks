@@ -7,9 +7,14 @@
 
 function averageMark(a, g, p) {
 	
-    // реализуйте здесь задание №1
+	// реализуйте здесь задание №1
+	let algebra = a;
+	let geography = g;
+	let physics = p;
+
+	let average = (algebra + geography + physics)/3;
     
-	return // ваш ответ;
+	return average; // ваш ответ;
 }
 
 function sayHello(userName) {
