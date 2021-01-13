@@ -17,13 +17,33 @@ function getResult(a, b, c) {
         x.push(value);
     }
     
-
     return x;
 }
 
 function getAverageMark(marks) {
     // код для задачи №2 писать здесь
-    // return averageMark;
+    let averageMark;
+    let numberRatings = marks.length;
+    console.log(marks.length);
+    let arrAverage = [];
+
+    if (numberRatings === 0) {
+        averageMark = 0;
+    } else if (numberRatings > 5) {
+        console.log(numberRatings);
+        arrAverage = marks.slice(0, 5);
+        console.log(marks.slice(0, 5));
+    } else {
+        arrAverage = marks;
+    }
+
+    let sum = 0;
+    for(let i = 0; i < arrAverage.length; i++) {
+        sum += arrAverage[i];
+    }
+    averageMark = sum / arrAverage.length;
+    
+    return averageMark;
 }
 
 function askDrink(name, dateOfBirthday) {
