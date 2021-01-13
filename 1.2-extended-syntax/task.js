@@ -29,6 +29,7 @@ function getAverageMark(marks) {
 
     if (numberRatings === 0) {
         averageMark = 0;
+        return averageMark;
     } else if (numberRatings > 5) {
         console.log(numberRatings);
         arrAverage = marks.slice(0, 5);
@@ -42,7 +43,7 @@ function getAverageMark(marks) {
         sum += arrAverage[i];
     }
     averageMark = sum / arrAverage.length;
-    
+
     return averageMark;
 }
 
