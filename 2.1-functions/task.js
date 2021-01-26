@@ -75,3 +75,23 @@ function getAverageMark(marks) {
     }
     return marksAvg;
 }
+
+// Задача №3
+
+function getPersonData(secretData) {
+    let pirates = {};
+    let name;
+    for (let prop in secretData) {
+        secret = secretData[prop];
+        name = getDecodedValue(secret);
+        prop = (prop === "aaa") ? "firstName" : "lastName";
+        pirates[prop] = name;
+    }
+
+    return pirates;
+}
+
+function getDecodedValue(secret) {
+
+    return (secret === 1) ? "Эмильо" : "Родриго";
+}
