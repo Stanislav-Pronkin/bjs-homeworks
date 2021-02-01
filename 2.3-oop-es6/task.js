@@ -1,3 +1,5 @@
+//Задача №1
+
 class PrintEditionItem {
     constructor(name, releaseDate, pagesCount) {
         this.name = name;
@@ -7,8 +9,23 @@ class PrintEditionItem {
         this.type = null;
     }
     fix() {
+
         this.state = this.state * 1.5;
+        return this.state;
     }
+    set state(value) {
+        if (value < 0) {
+            this._state = 0;
+        } else if (value > 100) {
+            this._state = 100;
+        } else {
+            this._state = value;
+        }
+    }
+    get state() {
+        return this._state;
+    }
+
 
 }
 class Magazine extends PrintEditionItem {
@@ -42,3 +59,6 @@ class DetectiveBook extends Book {
         this.type = "detective";
     }
 }
+
+//Задача №2
+
